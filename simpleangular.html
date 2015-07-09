@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title></title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+	</head>
+	<body ng-app>
+		<input type="text" ng-model="name" />
+		</br>		
+		<p>{{name}}</p>
+
+	<div class="container" ng-init="names=['Vishal','Vishi','Vishesh','Sumit','Abhishek','Sankalp','Shaleen','Roshan','Rahul']">
+			<ul>
+				<li ng-repeat="personName in names | filter:name">{{personName | uppercase}} </li>
+			</ul>		
+
+		</div>
+
+	<div ng-controller="SimpleController">
+	{{customer}}
+
+	 </div>
+
+	<script type="text/javascript">
+	function SimpleController($scope){
+		$scope.customer= "Vishal";
+	};
+	</script>	
+	</body>
+
+</html>
